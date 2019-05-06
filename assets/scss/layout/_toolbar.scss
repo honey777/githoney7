@@ -1,0 +1,225 @@
+.ly-toolbar {
+  background-color: $primary;
+
+  .container {
+    display: flex;
+    height: 35px;
+    align-items: center;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .link-item {
+    position: relative;
+    margin-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      margin-top: -5px;
+      width: 1px;
+      height: 10px;
+      background-color: #fff;
+      opacity: .3;
+    }
+    &.line-disabled {
+      margin-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    a,
+    button {
+      font-size: $font-size-sm;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .search {
+    position: relative;
+    margin-left: 10px;
+    z-index: 21;
+
+    input {
+      width: 150px;
+      height: 24px;
+      padding: 0 28px 0 8px;
+      font-size: $font-size-sm;
+      color: #fff;
+      border: 0;
+      background-color: rgba(0,0,0,0.3);
+
+      &:focus {
+        outline: 0;
+      }
+      &::placeholder {
+        color: #fff;
+        opacity: .5;
+      }
+    }
+    .material-icons {
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      color: #fff;
+      font-size: 1.3rem;
+      opacity: .5;
+    }
+    .autocomplete {
+      display: none;
+      position: absolute;
+      top: 24px;
+      left: 0;
+      right: 0;
+      border: 1px solid #c0c0c0;
+      background-color: #fff;
+      box-shadow: 0 0 2px rgba(0,0,0,.2);
+
+      .item {
+        position: relative;
+        display: block;
+        padding: 3px 5px;
+        font-size: $font-size-sm;
+        color: #737373;
+        border-bottom: 1px solid #d8d8d8;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+        &:hover {
+          color: $info;
+          background-color: #f5f5f5;
+        }
+        .material-icons {
+          top: 2px;
+          right: 0;
+          color: #919191;
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+
+  .user {
+    margin-right: 20px;
+    font-size: $font-size-sm;
+    color: #fff;
+  }
+
+  .bookmark {
+    position: relative;
+    z-index: 21;
+
+    .link-item button {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 13px;
+        height: 20px;
+        margin-left: 8px;
+
+        * {
+          stroke: #fff;
+          fill: transparent;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .bookmark-items {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 250px;
+    background-color: #fff;
+    border: $modal-content-border-width solid $modal-content-border-color;
+    box-shadow: $modal-content-box-shadow-xs;
+  }
+  .bookmark-items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px 0 20px;
+    border-bottom: 1px solid #000;
+
+    h3 {
+      margin: 0;
+      font-size: $font-size-lg;
+    }
+  }
+  .bookmark-items-body {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px 0;
+
+    .item {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 10px 3px 20px;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      a {
+        color: #222;
+
+        &:hover {
+          color: $info;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 3px;
+          height: 3px;
+          background: #222;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+      button {
+        color: #b9b9b9;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover {
+          color: #000;
+        }
+        .material-icons {
+          line-height: inherit;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .bookmark-items-footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+  }
+}

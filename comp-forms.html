@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/guide.css"/>          
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+        <!-- <link rel="stylesheet" href="./comm/css/bootstrap-theme.css"> -->
+        <!-- CSS 연결 //-->
+
+        <!-- SyntaxHighlighter -->
+        <script src="./assets/syntax/scripts/shCore.js"></script>
+        <script src="./assets/syntax/scripts/shBrushJScript.js"></script>
+        <link href="./assets/syntax/styles/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/syntax/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <!-- //SyntaxHighlighter -->
+
+    </head>
+    <body>
+        <!-- container -->
+        <div data-class="guide" class="container">
+
+            <h2>폼 요소</h2>
+
+            <!-- screen view -->
+            <p class="text-view">screen view</p>
+
+            <h3>텍스트 인풋</h3>
+            <input type="text" class="form-control input-group-date" placeholder="검색어를 입력하세요.">
+
+            <h3>셀렉트</h3>
+            <select class="form-control">
+                <option value="">10개씩 보기</option>
+                <option value="">20개씩 보기</option>
+                <option value="">50개씩 보기</option>
+                <option value="">100개씩 보기</option>                
+            </select>
+
+            <h3>기간 검색용 텍스트 인풋 조합</h3>
+            <div class="form-row"><!-- form-row 클래스 임시 적용 -->
+                <div class="col-2">
+                    <div class="input-group"><input class="form-control border-right-0" placeholder="시작일" type="text" aria-haspopup="true"><mat-datepicker></mat-datepicker><div _ngcontent-c16="" class="input-group-prepend"><button _ngcontent-c16="" class="btn btn-icon btn-outline-secondary" type="button"><i _ngcontent-c16="" class="material-icons">date_range</i></button></div></div>
+                </div>                    
+                <div class="col-auto">~</div>
+                <div class="col-2">
+                    <div class="input-group"><input class="form-control border-right-0" placeholder="종료일" type="text" aria-haspopup="true"><mat-datepicker></mat-datepicker><div _ngcontent-c16="" class="input-group-prepend"><button _ngcontent-c16="" class="btn btn-icon btn-outline-secondary" type="button"><i _ngcontent-c16="" class="material-icons">date_range</i></button></div></div>
+                </div>                  
+            </div>
+
+            <h3>체크박스</h3>
+            <div><!-- 임시 div로 묶음 -->
+                <label class="material-checkbox">
+                    <input type="checkbox" disabled>
+                    <span>Checkbox disabled</span>
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span>Checkbox1</span>
+                </label>
+                <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span>Checkbox2</span>
+                </label>                
+            </div>
+                     
+            <h3>라디오박스</h3>
+            <div><!-- 임시 div로 묶음 -->
+                <label class="material-radio">
+                    <input type="radio" name="group" disabled>
+                    <span>Radio Option disabled</span>
+                </label>
+                <label class="material-radio">
+                    <input type="radio" name="group">
+                    <span>Radio Option 1</span>
+                </label>
+                <label class="material-radio">
+                    <input type="radio" name="group">
+                    <span>Radio Option 2</span>
+                </label>                
+            </div>
+ 
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <h3>체크박스</h3>
+                <div><!-- 임시 div로 묶음 -->
+                    <label class="material-checkbox">
+                        <input type="checkbox" disabled>
+                        <span>Checkbox disabled</span>
+                    </label>
+                    <label class="material-checkbox">
+                        <input type="checkbox">
+                        <span>Checkbox1</span>
+                    </label>
+                    <label class="material-checkbox">
+                        <input type="checkbox">
+                        <span>Checkbox2</span>
+                    </label>                
+                </div>
+                         
+                <h3>라디오박스</h3>
+                <div><!-- 임시 div로 묶음 -->
+                    <label class="material-radio">
+                        <input type="radio" name="group" disabled>
+                        <span>Radio Option - disabled</span>
+                    </label>
+                    <label class="material-radio">
+                        <input type="radio" name="group">
+                        <span>Radio Option 1</span>
+                    </label>
+                    <label class="material-radio">
+                        <input type="radio" name="group">
+                        <span>Radio Option 2</span>
+                    </label>                
+                </div>
+            </pre>    
+                
+        </div>
+        <!-- //container -->            
+    </body>
+</html>

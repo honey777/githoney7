@@ -1,0 +1,104 @@
+.tabs-wrap {
+  position: relative;
+
+  .pos-abs {
+    @include pos-abs(0, 0, auto, auto);
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: $tabs-margin-bottom;
+  list-style: none;
+  border-bottom: $tabs-border-width solid $tabs-border-color;
+}
+.tabs-item {
+  min-width: 160px;
+  text-align: center;
+  margin-bottom: -$tabs-border-width;
+  margin-right: -$tabs-border-width;
+}
+.tabs-link {
+  display: block;
+  padding: $tabs-link-padding-y $tabs-link-padding-x;
+  color: $tabs-link-color;
+  background-color: $tabs-link-bg;
+  border: $tabs-border-width solid #c0c0c0;
+  border-bottom-color: $tabs-border-color;
+  font-size: $tabs-font-size;
+  width: 100%;
+  cursor: pointer;
+
+  @include hover {
+    color: $tabs-link-color;
+    background-color: $tabs-link-active-bg;
+  }
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: $tabs-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &.active {
+    position: relative;
+    font-weight: $font-weight-bold;
+    color: $tabs-link-active-color;
+    background-color: $tabs-link-active-bg;
+    border-color: $tabs-link-active-border-color;
+  }
+}
+
+.tabs-ink-bar {
+  border-bottom-color: $tabs-ink-bar-border-color;
+
+  .tabs-item {
+    margin-bottom: 0;
+  }
+  .tabs-link {
+    position: relative;
+    padding: $tabs-ink-bar-link-padding-y $tabs-ink-bar-link-padding-x;
+    border: 0 !important;
+    background-color: $tabs-link-active-bg;
+
+    @include hover {
+      color: $tabs-ink-bar-link-active-color;
+    }
+
+    &.active {
+      color: $tabs-ink-bar-link-active-color;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -$tabs-border-width;
+        height: 5px;
+        background-color: $tabs-ink-bar-link-active-color;
+      }
+    }
+  }
+}
+
+.tabs-justified {
+  .tabs-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.tabs-sm {
+  .tabs-link {
+    padding: $tabs-link-padding-y-sm $tabs-link-padding-x-sm;
+    font-size: $tabs-font-size * .943;
+  }  
+}
+
+

@@ -1,0 +1,111 @@
+.container[data-class="guide"] ul, .container[data-class="guide"] ol {
+  margin: 0;
+  padding: 0;
+}
+
+.container[data-class="guide"] ul li, .container[data-class="guide"] ol li {
+  list-style: none;
+}
+
+.container[data-class="guide"] h2 {
+  display: block;
+  margin: 20px 0 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #666;
+  font-size: 1.5rem;
+}
+
+.container[data-class="guide"] .stitle {
+  margin: 40px 0 20px;
+  padding: 10px;
+  background: #999;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.container[data-class="guide"] h3 {
+  margin: 40px 0 20px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.container[data-class="guide"] .text-view {
+  display: block;
+  margin: 40px 0 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.container[data-class="guide"] h3 + .text-view {
+  margin-top: 10px;
+}
+
+.container[data-class="guide"] div + h3 {
+  margin-top: 50px;
+}
+
+.container[data-class="guide"] .work-tab ul {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container[data-class="guide"] .work-tab ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  text-align: center;
+}
+
+.container[data-class="guide"] .work-tab ul li:not(:first-child) {
+  margin-left: -1px;
+}
+
+.container[data-class="guide"] .work-tab ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #b8b8b8;
+  font-size: 20px;
+  color: #333;
+}
+
+.container[data-class="guide"] .work-tab ul li.active {
+  background: #000;
+}
+
+.container[data-class="guide"] .work-tab ul li.active a {
+  color: #fff;
+}
+
+.container[data-class="guide"] .work-list {
+  padding: 20px;
+}
+
+.container[data-class="guide"] .work-list table {
+  width: 100%;
+}
+
+.container[data-class="guide"] .work-list table th, .container[data-class="guide"] .work-list table td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.container[data-class="guide"] .work-list table th {
+  background: #e2e2e2;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container[data-class="guide"] .work-list table td a {
+  font-size: 12px;
+}
+
+.container[data-class="guide"] .syntaxhighlighter {
+  padding: 10px 0;
+}

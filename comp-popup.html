@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html>
+  <!-- 스크립트 연결 -->
+  <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/common.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+  <!-- 스크립트 연결 //-->
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+  <link rel="stylesheet" type="text/css" href="./assets/css/guide.css"/>          
+  <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+  <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+  <!-- <link rel="stylesheet" href="./comm/css/bootstrap-theme.css"> -->
+  <!-- CSS 연결 //-->
+  <script>
+    $(function() {
+        //$('nav').load('guide_menu.html');
+        
+        $('.btn').on('click', function() {
+            winPopup(1000, 500, '나는나야');    
+        })
+    })            
+  </script>
+
+  <body>
+    <div class="wrapper" style="margin:30px">          
+        <div class="ex">
+            <button class="btn btn-outline-secondary" type="button">팝업확인</button>
+        </div> 
+    </div>      
+  </body>
+</html>

@@ -1,0 +1,101 @@
+.table {
+  width: 100%;
+  margin-bottom: $spacer;
+  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+  border-bottom: $table-border-width solid $table-border-color;
+
+  tr:first-child th,
+  tr:first-child td {
+    border-top: 1px solid $table-accent-border;
+  }
+
+  th,
+  td {
+    padding: $table-cell-padding-y $table-cell-padding-x;
+    vertical-align: middle;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    border-bottom: $table-border-width solid $table-border-color;
+  }
+
+  th {
+    background-color: $table-head-bg;
+  }
+
+  tbody + tbody {
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  .table {
+    background-color: $body-bg;
+  }
+
+  label.required::after {
+    content: '*';
+    color: $danger;
+  }
+
+  & .btn-outline-secondary {
+    background-color: $white;
+  }
+}
+
+.table-bordered {
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+
+  thead {
+    th,
+    td {
+      border-bottom-width: $table-border-width;
+    }
+  }
+
+  th:first-child,
+  td:first-child {
+    border-left: 0;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: 0;
+  }
+
+}
+
+.table-striped {
+  tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-accent-bg;
+  }
+}
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-hover-bg;
+    }
+  }
+}
+
+.table-hover-pointer {
+  tbody tr {
+    @include hover {
+      background-color: $table-hover-bg;
+      cursor: pointer;
+    }
+  }
+}
+
+.scope-col {
+  th, td {
+    text-align: center;
+    &:not(:first-child) {
+      border-left: $table-border-width solid $table-border-color;
+    }
+  }
+}

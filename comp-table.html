@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Table</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/guide.css"/>          
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+        <!-- <link rel="stylesheet" href="./comm/css/bootstrap-theme.css"> -->
+        <!-- CSS 연결 //-->
+
+        <!-- SyntaxHighlighter -->
+        <script src="./assets/syntax/scripts/shCore.js"></script>
+        <script src="./assets/syntax/scripts/shBrushJScript.js"></script>
+        <link href="./assets/syntax/styles/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/syntax/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <!-- //SyntaxHighlighter -->
+    </head>
+
+    <body>
+        <!-- container -->
+        <div data-class="guide" class="container">
+
+           <h2>테이블</h2>
+            
+           <h3>테이블01 - scope가 row이면서 th가 1개</h3>
+            <!-- screen view -->
+           <p class="text-view">screen view</p>
+
+            <!-- table -->
+            <table class="table">
+                <caption></caption>
+                <colgroup>
+                    <col style="width: 15%;">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <label class="required" for="">과목명</label>
+                        </th>
+                        <td>
+                            <input class="form-control" type="text" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">훈련유형</th>
+                        <td>
+                            컨텐츠
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">제작/활용주체</th>
+                        <td>
+                            컨텐츠
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">제작년월</th>
+                        <td>
+                            컨텐츠
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <!-- table -->
+                <table class="table">
+                    <caption></caption>
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <label class="required" for="">과목명</label>
+                            </th>
+                            <td>
+                                <input class="form-control" type="text" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">훈련유형</th>
+                            <td>
+                                컨텐츠
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">제작/활용주체</th>
+                            <td>
+                                컨텐츠
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">제작년월</th>
+                            <td>
+                                컨텐츠
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </pre>
+            
+            <h3>테이블02 - scope가 row이면서 th가 2개</h3>
+            <!-- screen view -->
+            <p class="text-view">screen view</p>
+
+            <!-- table -->
+            <table class="table">
+                <caption></caption>
+                <colgroup>
+                    <col style="width: 15%;">
+                    <col>
+                    <col style="width: 15%;">
+                    <col>                           
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row"><label for="">근로자내일배움카드유효기간</label></th>
+                        <td>
+                            <input class="form-control" type="text" id="">
+                        </td>
+                        <th scope="row"><label for="">근로자내일배움카드정지기간</label></th>
+                        <td>
+                            <input class="form-control" type="text" id="">
+                        </td>                            
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="">훈련유형</label>
+                        </th>
+                        <td>
+                            컨텐츠
+                        </td>
+                        <th scope="row">관심교육</th>
+                        <td>
+                            컨텐츠
+                        </td>                            
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <table class="table">
+                    <caption></caption>
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col>
+                        <col style="width: 15%;">
+                        <col>                           
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="">근로자내일배움카드유효기간</label></th>
+                            <td>
+                                <input class="form-control" type="text" id="">
+                            </td>
+                            <th scope="row"><label for="">근로자내일배움카드정지기간</label></th>
+                            <td>
+                                <input class="form-control" type="text" id="">
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <label for="">훈련유형</label>
+                            </th>
+                            <td>
+                                컨텐츠
+                            </td>
+                            <th scope="row">관심교육</th>
+                            <td>
+                                컨텐츠
+                            </td>                            
+                        </tr>
+                    </tbody>
+                </table>
+            </pre>
+
+            <h3>테이블03 - scope가 row이면서 th가 3개</h3>
+            <!-- screen view -->
+            <p class="text-view">screen view</p>
+
+            <!-- table -->
+            <table class="table">
+                <caption></caption>
+                <colgroup>
+                    <col style="width: 10%;">
+                    <col>
+                    <col style="width: 10%;">
+                    <col>                           
+                    <col style="width: 10%;">
+                    <col>                           
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">연도/기수</th>
+                        <td>2018 / 18120</td>
+                        <th scope="row">유/무료</th>
+                        <td>유료</td>                            
+                        <th scope="row">진행상태</th>
+                        <td>종료</td>                            
+                    </tr>
+                    <tr>
+                        <th scope="row">수강신청기간</th>
+                        <td>2017-06-25~2017-07-26</td>
+                        <th scope="row">학습기간</th>
+                        <td>2017-08-01~2017-10-31</td>                            
+                        <th scope="row">학습일</th>
+                        <td>92일간</td>                            
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <table class="table">
+                    <caption></caption>
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col>
+                        <col style="width: 10%;">
+                        <col>                           
+                        <col style="width: 10%;">
+                        <col>                           
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">연도/기수</th>
+                            <td>2018 / 18120</td>
+                            <th scope="row">유/무료</th>
+                            <td>유료</td>                            
+                            <th scope="row">진행상태</th>
+                            <td>종료</td>                            
+                        </tr>
+                        <tr>
+                            <th scope="row">수강신청기간</th>
+                            <td>2017-06-25~2017-07-26</td>
+                            <th scope="row">학습기간</th>
+                            <td>2017-08-01~2017-10-31</td>                            
+                            <th scope="row">학습일</th>
+                            <td>92일간</td>                            
+                        </tr>
+                    </tbody>
+                </table>
+            </pre>
+
+            <h3>테이블04 - scope가 col</h3>
+            <!-- screen view -->
+            <p class="text-view">screen view</p>
+
+            <!-- table -->
+            <table class="table scope-col">
+                <caption></caption>
+                <colgroup>
+                    <col style="width: 15%;">
+                    <col style="width: 25%;">
+                    <col style="width: 15%;">
+                    <col style="width: 15%;">                          
+                    <col style="width: 15%;">
+                    <col style="width: 15%;">
+                    <col>                           
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">과목훈련유형</th>
+                        <th scope="col">학습기간</th>
+                        <th scope="col">권장진도율</th>
+                        <th scope="col">평균동료진도율</th>
+                        <th scope="col">수강생수</th>
+                        <th scope="col">수료자수</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-outline-secondary" type="button">온라인</button><!-- 테이블 내부 버튼 -->
+                        </td>
+                        <td>2018-02-01~2018-02-28</td>
+                        <td>100%</td>
+                        <td>83%</td>
+                        <td>10명</td>
+                        <td>8명</td>                      
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+
+            </pre>
+                
+                
+            <h3>테이블05 - thead/tbody 사용</h3>
+            <!-- screen view -->
+            <p class="text-view">screen view</p>
+
+            <!-- table -->
+            <table class="table scope-col">
+                <caption></caption>
+                <colgroup>
+                    <col>
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 12%;">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="5">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button class="btn btn-outline-secondary" type="button">수료확정</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-outline-secondary" type="button">과제제출현황</button>
+                                    <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                    <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                    <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                    <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                    <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                    <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                </div>
+                            </div>
+                        </th>                                                      
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <th>수료확정여부</th>
+                        <td>Y</td>
+                        <th>담당튜터</th>
+                        <td><a href="#">홍길동 외 8명</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <table class="table scope-col">
+                    <caption></caption>
+                    <colgroup>
+                        <col>
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 12%;">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <button class="btn btn-outline-secondary" type="button">수료확정</button>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-outline-secondary" type="button">과제제출현황</button>
+                                        <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                        <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                        <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                        <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                        <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                        <button class="btn btn-outline-secondary ml-2" type="button">과제제출현황</button>
+                                    </div>
+                                </div>
+                            </th>                                                      
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <th>수료확정여부</th>
+                            <td>Y</td>
+                            <th>담당튜터</th>
+                            <td><a href="#">홍길동 외 8명</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </pre>            
+ 
+        </div>
+        <!-- //container -->            
+    </body>
+</html>

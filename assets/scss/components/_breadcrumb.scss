@@ -1,0 +1,83 @@
+.breadcrumb-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: $breadcrumb-margin-bottom;
+
+  .breadcrumb {
+    margin: 0;
+  }
+  .refresh {
+    margin-left: 4px;
+
+    .material-icons {
+      font-size: 20px;
+    }
+  }
+  .bookmark {
+    svg {
+      width: 13px;
+      height: 20px;
+    }
+    * {
+      stroke: #666;
+      fill: transparent;
+    }
+  }
+  .bookmark:hover {
+    * {
+      stroke: $primary;
+    }
+  }
+  .bookmark-active {
+    * {
+      stroke: $primary;
+      fill: $primary;
+    }
+  }
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  margin-bottom: $breadcrumb-margin-bottom;
+  list-style: none;
+  font-size: $breadcrumb-font-size;
+  background-color: $breadcrumb-bg;
+  @include border-radius($breadcrumb-border-radius);
+}
+
+.breadcrumb-item {
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding;
+
+    &::before {
+      display: inline-block;
+      padding-right: $breadcrumb-item-padding;
+      color: $breadcrumb-divider-color;
+      content: $breadcrumb-divider;
+    }
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  a {
+    color: $breadcrumb-parent-color;
+  }
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
+
+  .material-icons {
+    line-height: inherit;
+    font-size: 16px;
+  }
+}

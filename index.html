@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curation</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+        <!-- <link rel="stylesheet" href="./comm/css/bootstrap-theme.css"> -->
+        <!-- CSS 연결 //-->
+
+        <script type='text/javascript'>
+
+    $(function(){
+        $('.input-group-date').datepicker({
+            calendarWeeks: false,
+            todayHighlight: true,
+            autoclose: true,
+            format: "yyyy/mm/dd",
+            language: "kr"
+        });
+
+    });
+
+    </script>
+
+        <style>
+        .no-gutters {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .pagination {
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+        }
+        .no-gutters>.col, .no-gutters>[class*=col-] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .col-10 {
+            flex: 0 0 83.33333333%;
+            max-width: 83.33333333%;
+        }
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pagination {
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+        }
+        .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+            box-sizing: border-box;
+            position: relative;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: pointer;
+            outline: 0;
+            border: none;
+            -webkit-tap-highlight-color: transparent;
+            display: inline-block;
+            white-space: nowrap;
+            text-decoration: none;
+            vertical-align: baseline;
+            text-align: center;
+            margin: 0;
+            min-width: 64px;
+            line-height: 36px;
+            padding: 0 16px;
+            border-radius: 4px;
+            overflow: visible;
+        }
+        .mat-button, .mat-icon-button, .mat-stroked-button {
+            color: inherit;
+            background: 0 0;
+        }
+        .mat-icon {
+            background-repeat: no-repeat;
+            display: inline-block;
+            fill: currentColor;
+            height: 24px;
+            width: 24px;
+        }
+        .mat-button.mat-accent[disabled], .mat-button.mat-primary[disabled], .mat-button.mat-warn[disabled], .mat-button[disabled][disabled], .mat-icon-button.mat-accent[disabled], .mat-icon-button.mat-primary[disabled], .mat-icon-button.mat-warn[disabled], .mat-icon-button[disabled][disabled], .mat-stroked-button.mat-accent[disabled], .mat-stroked-button.mat-primary[disabled], .mat-stroked-button.mat-warn[disabled], .mat-stroked-button[disabled][disabled] {
+            color: rgba(0,0,0,.26);
+        }
+        
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        
+    	<!-- container -->
+    	<div class="container">
+
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  ...
+                </div>
+              </div>
+            </div>
+    		<!-- nav -->
+    		<nav class="breadcrumb-wrap">
+    			<ol class="breadcrumb">
+    				<li class="breadcrumb-item ng-star-inserted">
+    					<a href="/ja/contents-lib" class="ng-star-inserted">콘텐츠 라이브러리 </a>
+    				</li>
+    				<li class="breadcrumb-item active ng-star-inserted">
+    					<span class="ng-star-inserted">동영상</span>
+    				</li>
+    			</ol>
+    			<button class="btn-icon-only refresh" type="button">
+    				<i class="material-icons">refresh</i>
+    			</button>
+    			<button type="button" class="btn-icon-only bookmark"><i class="material-icons">bookmark_border</i></button>
+                <button type="button" class="btn-icon-only bookmark bookmark-active"><i class="material-icons">bookmark</i></button>
+    		</nav>
+
+    		<section>
+    			<h1 _ngcontent-c16="">동영상</h1>
+    			<form>
+    				<div class="filter-box">
+
+    					<div class="form-row">
+    						<div class="col-1">
+    							<select class="form-control">
+    								<option value="">구분 전체</option>
+    								<option value="">시리즈</option>
+    								<option value="">단위</option>
+    							</select>
+    						</div>
+    						<div class="col-1">
+    							<select class="form-control">
+    								<option value="">제1목</option>
+    								<option value="">콘텐츠 코드</option>
+    								<option value="">등록자</option>
+    							</select>
+    						</div>
+    						<div class="col-5">
+    							<input type="text" class="form-control input-group-date" placeholder="검색어를 입력하세요.">
+    						</div>
+    						<div class="col-2">
+    							<div class="input-group">
+    								<input class="form-control border-right-0 .input-group.date" placeholder="시작일" type="text">
+    								<mat-datepicker></mat-datepicker>
+    								<div class="input-group-prepend">
+    									<button class="btn btn-icon btn-outline-secondary" type="button">
+    										<i class="material-icons">date_range</i>
+    									</button>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="col-auto">~</div>
+    						<div class="col-2">
+    							<div class="input-group">
+    								<input class="form-control border-right-0" placeholder="종료일" type="text">
+    								<mat-datepicker></mat-datepicker>
+    								<div class="input-group-prepend">
+    									<button class="btn btn-icon btn-outline-secondary" type="button">
+    										<i class="material-icons">date_range</i>
+    									</button>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+
+                        <div class="form-row">
+                            <div class="col-1">
+                                <select class="form-control">
+                                    <option value="">구분 전체</option>
+                                    <option value="">시리즈</option>
+                                    <option value="">단위</option>
+                                </select>
+                            </div>
+                            <div class="col-1">
+                                <select class="form-control">
+                                    <option value="">제목</option>
+                                    <option value="">콘텐츠 코드</option>
+                                    <option value="">등록자</option>
+                                </select>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="form-control border-right-0" placeholder="시작일" type="text">
+                                    <mat-datepicker></mat-datepicker>
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-icon btn-outline-secondary" type="button">
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">~</div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="form-control border-right-0" placeholder="종료일" type="text">
+                                    <mat-datepicker></mat-datepicker>
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-icon btn-outline-secondary" type="button">
+                                            <i class="material-icons">date_range</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+    					<div class="filter-box-footer">
+    						<button class="btn btn-primary" type="submit">
+                                <i class="material-icons">search</i>                                
+                                <span>검색</span>
+                            </button>
+    						<button class="btn btn-outline-secondary" type="button">초기화</button>
+    					</div>
+
+    				</div>
+
+    			</form>
+    		</section>
+
+        	<div class="d-flex justify-content-between mb-2">
+                <div>
+                    <span>검색결과</span>
+                    <strong></strong>
+                    <button class="btn btn-outline-secondary ml-2" type="button">선택 동영상 시리즈 등록</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="button">신규 등록</button>
+                    <button class="btn btn-outline-secondary ml-2" type="button">
+                        <i class="material-icons">get_app</i> 엑셀 다운로드 
+                    </button>
+                    <button class="btn btn-icon btn-outline-secondary ml-2" type="button">
+                        <i class="material-icons">settings</i>
+                    </button>
+                </div>
+            </div>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>구분</th>
+                        <th>콘텐츠 코드</th>
+                        <th>제목</th>
+                        <th>태그</th>
+                        <th>사용된 과목</th>
+                        <th>등록일</th>
+                        <th>등록자</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>                    
+                </tbody>
+                <tfoot></tfoot>                
+            </table>
+            <style>
+                .breadcrumb-wrap .bookmark * {
+                    stroke: #ed1c24;
+                    color: red;
+                }
+
+            </style>
+            <div class="row no-gutters">
+                <div class="col-1 d-flex align-items-center">
+                    <select class="form-control ng-untouched ng-pristine ng-valid">
+                        <option value="10">10개씩 보기</option>
+                        <option value="20">20개씩 보기</option>
+                        <option value="50">50개씩 보기</option>
+                        <option value="100">100개씩 보기</option>
+                    </select>
+                </div>
+                <div class="col-10">
+
+                    <div class="site-example-viewer">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="material-icons">chevron_right</i></a></li>
+                      </ul>
+                    </div>
+
+                    
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </body>
+</html>

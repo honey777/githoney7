@@ -1,0 +1,73 @@
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border: 1px solid transparent;
+  @include border-radius($badge-border-radius);
+
+  @at-root a#{&} {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// Pill badges
+.badge-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  border-radius: $badge-pill-border-radius;
+  // @include border-radius($badge-pill-border-radius);
+}
+
+@mixin badge-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+
+  @at-root a#{&} {
+    @include hover-focus {
+      color: color-yiq($bg);
+      background-color: darken($bg, 10%);
+    }
+  }
+}
+
+@mixin badge-outline-variant($bg) {
+  color: $bg;
+  border-color: $bg;
+
+  @at-root a#{&} {
+    @include hover-focus {
+      color: $bg;
+      border-color: darken($bg, 10%);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+    @include badge-outline-variant($value);
+  }
+}

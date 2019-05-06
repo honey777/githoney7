@@ -1,0 +1,25 @@
+.filter-box {
+  margin-bottom: 1rem;
+  padding: 2rem;
+  border: 4px solid #dbdbdb;
+
+  > .form-row {
+    margin-top: 0.5rem;
+    padding: 0 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.filter-box-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dbdbdb;
+
+  button {
+    margin: 0 3px;
+  }
+}

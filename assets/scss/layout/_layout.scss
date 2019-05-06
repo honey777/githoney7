@@ -1,0 +1,28 @@
+.ly-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.ly-body {
+  // margin-top: 221px;
+  padding: 236px 0 30px 0;
+}
+
+.ly-is-scroll {
+  .ly-body {
+    // margin-top: 146px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ly-header {
+    position: relative;
+    min-width: map-get($container-max-widths, 'lg');
+  }
+  .ly-body {
+    padding-top: 15px;
+  }
+}

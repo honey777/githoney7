@@ -1,0 +1,254 @@
+
+<!doctype html>
+<html>
+    <head>
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <!-- CSS 연결 //-->
+        <style>
+            @import "base.css";
+
+            .wrapper {
+                margin: 0 auto;
+                width: 900px;
+                background: #fff;
+                padding: 0px 0px 20px 0px;
+            }
+            nav .site-name {
+                display: block;
+                font-size: 15px;
+                font-weight: normal;
+                padding: 10px 0px 10px 10px;
+            }
+            nav .site-name span {
+                color: #000;
+                font-weight: normal;
+            }
+            nav .gnb {
+                background: #d92e2e;
+                border: 1px solid #c72525;
+            }
+            nav .gnb li {
+                display: inline-block;
+                font-size: 12px;
+                font-weight: normal;
+                color: #fff;
+            }
+            nav .gnb li a {
+                display: inline-block;
+                padding: 10px 14px;
+                font-size: 12px;
+                font-weight: normal;
+                color: #fff;
+            }
+
+            .gnb-sub {
+                border-bottom: 1px solid #c72525;
+            }
+            .gnb-sub li {
+                display: inline-block;
+                font-size: 12px;
+                font-weight: normal;
+                color: #000;
+            }
+            .gnb-sub li a {
+                display: inline-block;
+                padding: 10px 14px;
+                font-size: 12px;
+                font-weight: normal;
+                color: #000;
+            }
+            .section-title {
+                font-size: 14px;
+                font-weight: bold;
+                color: #000;
+                padding: 30px 0px 10px 12px;
+                border-bottom: 1px solid #d1d8e4;
+            }
+            .title-big {
+                font-size: 14px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 10px;
+            }
+            .contents_1 {
+                font-size: 12px;
+                font-weight: normal;
+                color: #000;
+                margin-top: 0px;
+                margin-bottom: 14px;
+            }
+            section {
+                width: 100%;
+                padding: 20px 14px 0px 14px;
+            }
+            section .code {
+                margin-bottom: 25px;
+            }
+            section .code xmp {
+                font-family: inherit;
+                font-size: 11px;
+                color: #666;
+                border: 1px solid #d1d8e4;
+                background: #efefef;
+                padding: 0px 14px;
+            }
+            section .title {
+                font-size: 12px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 5px;
+            }
+            section .contents {
+                font-size: 12px;
+                font-weight: normal;
+                color: #000;
+                margin-bottom: 25px;
+            }
+            section .list ul {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            section .list ul li {
+                font-size: 12px;
+                color: #000;
+                list-style-type: disc;
+                margin-left: 26px;
+                padding: 0px;
+            }
+            section .list ul .list_style_1 {
+                list-style-type: circle;
+                margin-left: 40px;
+            }
+            section .list ul .list_style_2 {
+                list-style-type: none;
+                margin-left: 26px;
+            }
+
+            .gradiention_1 {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5896bd+1,39aea6+100 */
+            background: #5896bd; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #5896bd 1%, #39aea6 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, #5896bd 1%,#39aea6 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, #5896bd 1%,#39aea6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5896bd', endColorstr='#39aea6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            }
+
+            .radius_1 {
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            border-radius: 2px;
+            }
+
+            .comTotal {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .comTotal > div {
+                margin: 0 auto;
+                width: 24.6%;
+                display: inline-block;
+                padding: 10px;                
+            }
+            .comTotal div span {
+                font-size: 14px;
+                font-weight: normal;
+                color: #000;
+            }
+            .comTotal div span:nth-child(2) {
+                font-size: 20px;
+                font-weight: bold;
+                color: #d92e2e;
+                float: right;
+            }
+            .comTotal div p {
+                font-size: 12px;
+                color: #666;
+            }
+            .comTotal .box {
+                width: 100%;
+                padding: 15px;
+                background: #efefef;
+                border: 1px solid #c1d6d4;
+            }
+            .clearboth {
+                clear: both;
+            }
+            .desc {
+                margin-top: 10px;
+                color: red
+            }
+            .ex {
+                margin-top: 10px;
+                margin-bottom: 40px;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">            
+            <nav>
+                <div class="site-name"><a href="index.html">Hunet<span>Guide</span></a></div>
+                <div class="gnb">
+                    <ul>
+                        <li><a href="basic.html">hunet Guide</a></li>
+                        <li><a href="highchart.html">High Chart</a></li>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="template.html">Template</a></li>
+                    </ul>
+                </div>
+            </nav>
+        
+            <div class="guide-menu-sub"></div>
+            
+            <div class="section-title bclick">진행상태</div>
+
+            <!-- guide -->
+            <section>
+                선택을 해야할 경우 토글버튼이 있으나 Radio로 통일함.
+                <div>시스템팝업호출(받아야할 내용 정의),페이징, append div remove div, 달력(팝업, 바닥), radio, checkbox, 모달, 드롭다운, tab, 툴팁, 가리기/보이기, 아코디언, Drag &amp; Drop</div>
+                <div>Grid시스템, 라벨</div>
+                
+                <div class="comTotal">
+                    <div>
+                        <div class="box radius_1 gradiention_1">
+                            <span>전체진행률</span>
+                            <span>50%</span>
+                            <p>1/30</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box radius_1 gradiention_1">
+                            <span>HPM진행률</span>
+                            <span>50%</span>
+                            <p>1/30</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box radius_1 gradiention_1">
+                            <span>LMS진행률</span>
+                            <span>50%</span>
+                            <p>1/30</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box radius_1">
+                            <span>LMS진행률</span>
+                            <span>50%</span>
+                            <p>1/30</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- guide //-->
+
+        </div> 
+    </body>
+</html>

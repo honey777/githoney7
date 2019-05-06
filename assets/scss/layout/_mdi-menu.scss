@@ -1,0 +1,62 @@
+.ly-mdi-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 35px;
+  background-color: #e7eaed;
+
+  .item {
+    position: relative;
+    width: 10%;
+    min-width: 10%;
+
+    .item-link {
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      padding: 0 26px 0 12px;
+      text-decoration: none;
+      color: #000;
+      border-right: 1px solid #cdcdcd;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      transition: ease-in-out all 0.2s;
+    
+      &:hover {
+        color: #000;
+        background-color: rgba(0,0,0,.1);
+      }
+    }
+    button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border: 0;
+      padding: 0 6px;
+      color: #222;
+      background: transparent;
+      transition: ease-in-out all 0.2s;
+      cursor: pointer;
+      border-radius: 5px;
+  
+      &:hover {
+        color: $info;
+      }
+      .material-icons {
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+        line-height: inherit;
+      }
+    }
+    &.active {
+      .item-link {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+}
+

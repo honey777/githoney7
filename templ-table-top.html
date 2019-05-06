@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabel Top</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/guide.css"/>        
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+        <!-- <link rel="stylesheet" href="./comm/css/bootstrap-theme.css"> -->
+        <!-- CSS 연결 //-->
+
+        <!-- SyntaxHighlighter -->
+        <script src="./assets/syntax/scripts/shCore.js"></script>
+        <script src="./assets/syntax/scripts/shBrushJScript.js"></script>
+        <link href="./assets/syntax/styles/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/syntax/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <!-- //SyntaxHighlighter --> 
+
+        <style>
+            /* 임시 */ .grid-area {padding:5px; background-color:#eee}
+        </style>        
+    </head>
+    <body>
+        <!-- container -->
+        <div data-class="guide" class="container">
+
+           <h2>테이블 상단 영역</h2>
+
+           <p class="stitle">검색 상단</p>
+        
+            <!-- screen view -->
+            <p class="text-view">screen view</p>            
+
+            <!-- table top -->
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div>
+                    <span>검색결과</span><strong> 0</strong>건
+                    <button class="btn btn-outline-secondary ml-2" type="button">선택 이미지 번들 등록</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="button">과목코드 개설</button>
+                    <button class="btn btn-outline-secondary ml-2" type="button">과목 일괄개설</button>
+                    <button class="btn btn-outline-secondary ml-2" type="button"><i class="material-icons">get_app</i> 엑셀 다운로드 </button>
+                    <button class="btn btn-icon btn-outline-secondary ml-2" type="button"><i class="material-icons">settings</i></button>
+                </div>
+            </div>
+            <!-- Grid -->
+            <div class="grid-area">Grid 영역</div>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <!-- left area -->
+                    <div>
+                        <span>검색결과</span><strong> 0</strong>건
+                        <button class="btn btn-outline-secondary ml-2" type="button">선택 이미지 번들 등록</button>
+                    </div>
+                     <!-- right area -->
+                    <div>
+                        <button class="btn btn-primary" type="button">과목코드 개설</button>
+                        <button class="btn btn-outline-secondary ml-2" type="button">과목 일괄개설</button>
+                        <button class="btn btn-outline-secondary ml-2" type="button"><i class="material-icons">get_app</i> 엑셀 다운로드 </button>
+                        <button class="btn btn-icon btn-outline-secondary ml-2" type="button"><i class="material-icons">settings</i></button>
+                    </div>
+                </div>                
+            </pre>
+            
+
+            <p class="stitle">테이블 상단: 타이틀과 [버튼]</p>
+         
+            <!-- screen view -->
+            <p class="text-view">screen view</p>
+
+            <!-- table top -->
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- left area -->
+                <div>
+                    <h1>정형 과목코드 개설</h1>
+                    <p>신규 과목코드 개설하는 화면입니다. (과목복사, 제작년월/연번 추가, 다른 훈련유형으로 변환은 해당 과목관리 홈에서 가능)</p>
+                </div>
+                <!-- right area -->
+                <div>
+                    <button class="btn btn-primary" type="button">과목관리 홈</button>
+                    <button class="btn btn-outline-secondary ml-2" type="button">수정</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid-area">Grid 영역</div>
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- left area -->
+                    <div>
+                        <h1>정형 과목코드 개설</h1>
+                        <p>신규 과목코드 개설하는 화면입니다. (과목복사, 제작년월/연번 추가, 다른 훈련유형으로 변환은 해당 과목관리 홈에서 가능)</p>
+                    </div>
+                    <!-- right area -->
+                    <div>
+                        <button class="btn btn-primary" type="button">과목관리 홈</button>
+                        <button class="btn btn-outline-secondary ml-2" type="button">수정</button>
+                    </div>
+                </div>      
+            </pre>
+ 
+        </div>
+        <!-- //container -->            
+    </body>
+</html>

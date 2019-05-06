@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Buttons</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/guide.css"/>          
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+        <!-- CSS 연결 //-->
+
+        <!-- SyntaxHighlighter -->
+        <script src="./assets/syntax/scripts/shCore.js"></script>
+        <script src="./assets/syntax/scripts/shBrushJScript.js"></script>
+        <link href="./assets/syntax/styles/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/syntax/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <!-- //SyntaxHighlighter -->
+
+    </head>
+    <body>
+        <!-- container -->
+        <div data-class="guide" class="container">
+
+            <h2>버튼</h2>
+
+            <!-- screen view -->
+            <p class="text-view">screen view</p>            
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div>
+                    <h3>Primary Button</h3>
+                    <button class="btn btn-primary" type="button">
+                        <span>버튼</span>
+                    </button>
+                    <button class="btn btn-primary" type="button" disabled>
+                        <span>버튼</span>
+                    </button>
+                </div>
+                <div>
+                    <h3 style="width:360px">Primary Button - 아이콘 함께 사용</h3>            
+                    <button class="btn btn-primary" type="submit">
+                        <i class="material-icons">search</i>
+                        <span> 검색</span>
+                    </button>
+                    <button class="btn btn-primary" type="submit" disabled>
+                        <i class="material-icons">search</i>
+                        <span> 검색</span>
+                    </button>                    
+                </div>
+                <div>
+                    <h3>Primary Button - 흰색 백그라운드와 붉은색 보더</h3>              
+                    <button class="btn btn-outline-primary" type="button">
+                        <i class="material-icons">icon</i>
+                        <span>텍스트</span>
+                    </button>
+                    <button class="btn btn-outline-primary" type="button" disabled>
+                        <i class="material-icons">icon</i>
+                        <span>텍스트</span>
+                    </button>                    
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div>
+                    <h3>Secondary Button - 흰색 백그라운드와 회색 보더</h3>            
+                    <button class="btn btn-outline-secondary" type="button">취소</button>
+                    <button class="btn btn-outline-secondary" type="button" disabled>취소</button>
+                </div>
+                <div>
+                    <h3>Secondary Button - 회색 백그라운드와 회색 보더</h3>            
+                    <button class="btn btn-secondary btn-outline-grey" type="button">취소</button>
+                    <button class="btn btn-secondary btn-outline-grey" type="button" disabled>취소</button>    
+                </div>
+                <div>
+                    <h3>Secondary Button - 접기/펼치기 * 작업 예정</h3>            
+                    <button class="btn btn-secondary" type="button">
+                        <i class="material-icons">icon</i>
+                        <span>텍스트</span>
+                    </button>
+                    <button class="btn btn-secondary" type="button" disabled>
+                        <i class="material-icons">icon</i>
+                        <span>텍스트</span>
+                    </button>
+                </div>                
+            </div>
+
+            <h3>어두운 dark Button</h3>
+            <button class="btn btn-dark" type="submit">
+                <i class="material-icons">search</i>
+                <span> 검색</span>
+            </button>
+            <button class="btn btn-dark" type="submit" disabled>
+                <i class="material-icons">search</i>
+                <span> 검색</span>
+            </button>             
+            
+            <h3>Secondary Button - 아이콘 단독 사용(.btn-icon 추가)</h3>
+            <button class="btn btn-icon btn-outline-secondary" type="button">
+                <i class="material-icons">settings</i>
+            </button>
+            <button class="btn btn-icon btn-outline-secondary" type="button" disabled>
+                <i class="material-icons">settings</i>
+            </button>            
+
+            <h3>아이콘 버튼(.btn-icon-only 사용)</h3>
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <button class="btn-icon-only refresh" type="button">
+                    <i class="material-icons">refresh</i>
+                </button>
+                <button aria-label="즐겨찾기" class="btn-icon-only bookmark" type="button">
+                    <svg style="width:13px; height:20px; stroke: #666; fill: transparent;">
+                        <use xlink:href="./assets/img/icons.svg#bookmark"></use>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 22" id="bookmark" width="100%" height="100%">
+                            <path d="M13.99 1H1v20l6.32-3.459L13.99 21V1z" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"></path>
+                        </svg>    
+                    </svg>
+                </button>     
+            </div>
+            
+            <h3>png 아이콘 있는 버튼</h3>
+            <button class="btn btn-outline-secondary" type="button">
+                <i class="material-icons icons-png ico-pop">icon</i> 과목수료기준
+            </button>
+            <button class="btn btn-outline-secondary" type="button" disabled>
+                <i class="material-icons icons-png ico-pop">icon</i> 과목수료기준
+            </button>                         
+
+            <h3>테이블 내 작은 버튼</h3>
+            <button class="btn btn-sm btn-outline-secondary" type="button">학습이력</button>       
+            <button class="btn btn-sm btn-outline-secondary" type="button" disabled>학습이력</button> 
+
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <h3>Primary Button</h3>
+                <button class="btn btn-primary" type="button">
+                    <span>버튼</span>
+                </button>
+                <button class="btn btn-primary" type="button" disabled>
+                    <span>버튼</span>
+                </button>                  
+
+                <h3>Primary Button - 아이콘 함께 사용</h3>            
+                <button class="btn btn-primary" type="submit">
+                    <i class="material-icons">search</i>
+                    <span> 검색</span>
+                </button>
+                <button class="btn btn-primary" type="button">
+                    <i class="material-icons">icon</i>
+                    <span>O 버튼</span>
+                </button>             
+
+                <h3>Secondary Button</h3>            
+                <button class="btn btn-outline-secondary" type="button">취소</button>
+                <button class="btn btn-outline-secondary" type="button" disabled>취소</button>                              
+                
+                <h3>Secondary Button - 아이콘 함께 사용</h3>
+                <button class="btn btn-outline-secondary ml-2" type="button">
+                    <i class="material-icons">get_app</i> 엑셀 다운로드
+                </button>
+                
+                <h3>Secondary Button - 아이콘 단독 사용</h3>
+                <button class="btn btn-icon btn-outline-secondary ml-2" type="button">
+                    <i class="material-icons">settings</i>
+                </button>
+                
+                <h3>아이콘 버튼</h3>
+                <button class="btn-icon-only refresh" type="button">
+                    <i class="material-icons">refresh</i>
+                </button>
+                <button aria-label="즐겨찾기" class="btn-icon-only bookmark" type="button">
+                    <svg style="width:13px; height:20px; stroke: #666; fill: transparent;">
+                        <use xlink:href="./assets/img/icons.svg#bookmark"></use>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 22" id="bookmark" width="100%" height="100%">
+                            <path d="M13.99 1H1v20l6.32-3.459L13.99 21V1z" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"></path>
+                        </svg>    
+                    </svg>
+                </button> 
+                <h3>png 아이콘 있는 버튼</h3>
+                <button class="btn btn-outline-secondary" type="button">
+                    <i class="material-icons icons-png ico-pop">icon</i> 과목수료기준
+                </button>            
+    
+                <h3>테이블 내 작은 버튼</h3>
+                <button class="btn btn-sm btn-outline-secondary" type="button">학습이력</button>                    
+            </pre>    
+                
+        </div>
+        <!-- //container -->            
+    </body>
+</html>

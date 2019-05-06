@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search</title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- 스크립트 연결 -->
+        <script type="text/javascript" src="./assets/js/jquery-3.10.1.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/js/bootstrap-datepicker.kr.js"></script>
+        <!-- 스크립트 연결 //-->
+
+        <!-- CSS 연결 -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/material-icons.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/guide.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/hous.css"/>
+        <link rel="stylesheet" type="text/css" href="./datepicker3.css"/>
+        <!-- <link rel="stylesheet" href="./comm/css/bootstrap-theme.css"> -->
+        <!-- CSS 연결 //-->
+
+        <!-- SyntaxHighlighter -->
+        <script src="./assets/syntax/scripts/shCore.js"></script>
+        <script src="./assets/syntax/scripts/shBrushJScript.js"></script>
+        <link href="./assets/syntax/styles/shCore.css" rel="stylesheet" type="text/css" />
+        <link href="./assets/syntax/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <!-- //SyntaxHighlighter -->
+     
+    </head>
+    <body>
+        <!-- container -->
+        <div data-class="guide" class="container">
+
+           <h2>검색 영역</h2>
+        
+            <!-- screen view -->
+            <p class="text-view">screen view</p>            
+
+            <!-- filter box -->
+            <form>
+                <div class="filter-box">
+                    <div class="form-row">
+                        <!-- 유형별로 col 클래스 적용 -->
+                        <div class="col-3"><input class="form-control" placeholder="검색어를 입력해 주세요." type="text"></div>
+                        <div class="col-2">
+                            <select class="form-control">
+                                <option value="null">구분 전체</option>
+                                <option value="1">시리즈</option>
+                                <option value="2">댠위</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group"><input class="form-control border-right-0" placeholder="시작일" type="text" aria-haspopup="true"><mat-datepicker></mat-datepicker><div _ngcontent-c16="" class="input-group-prepend"><button _ngcontent-c16="" class="btn btn-icon btn-outline-secondary" type="button"><i _ngcontent-c16="" class="material-icons">date_range</i></button></div></div>
+                        </div>                    
+                        <div class="col-auto">~</div>
+                        <div class="col-2">
+                            <div class="input-group"><input class="form-control border-right-0" placeholder="종료일" type="text" aria-haspopup="true"><mat-datepicker></mat-datepicker><div _ngcontent-c16="" class="input-group-prepend"><button _ngcontent-c16="" class="btn btn-icon btn-outline-secondary" type="button"><i _ngcontent-c16="" class="material-icons">date_range</i></button></div></div>
+                        </div>
+                        <div class="col-2">
+                            <select class="form-control">
+                                <option value="">제작완료여부</option>
+                            </select>
+                        </div>                    
+                    </div>
+                    <div class="filter-box-footer">
+                        <!-- <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 명사만 조회
+                            </label>
+                        </div> -->
+                        <button class="btn btn-primary" type="submit">
+                            <i class="material-icons">search</i>
+                            <span> 검색</span>
+                        </button>
+                        <button class="btn btn-outline-secondary" type="button">초기화</button>
+                    </div>                
+                </div>
+            </form>
+ 
+            <!-- code view -->
+            <p class="text-view">code view</p>
+
+            <pre class="brush:js;">
+                <form>
+                    <div class="filter-box">
+                        <!-- filter- top -->
+                        <div class="form-row">
+                            <!-- 유형별로 col 클래스 적용 -->
+                            <div class="col-3"><input class="form-control" placeholder="검색어를 입력해 주세요." type="text"></div>
+                            <div class="col-2">
+                                <select class="form-control">
+                                    <option value="null">구분 전체</option>
+                                    <option value="1">시리즈</option>
+                                    <option value="2">댠위</option>
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group"><input class="form-control border-right-0" placeholder="시작일" type="text" aria-haspopup="true"><mat-datepicker></mat-datepicker><div _ngcontent-c16="" class="input-group-prepend"><button _ngcontent-c16="" class="btn btn-icon btn-outline-secondary" type="button"><i _ngcontent-c16="" class="material-icons">date_range</i></button></div></div>
+                            </div>                    
+                            <div class="col-auto">~</div>
+                            <div class="col-2">
+                                <div class="input-group"><input class="form-control border-right-0" placeholder="종료일" type="text" aria-haspopup="true"><mat-datepicker></mat-datepicker><div _ngcontent-c16="" class="input-group-prepend"><button _ngcontent-c16="" class="btn btn-icon btn-outline-secondary" type="button"><i _ngcontent-c16="" class="material-icons">date_range</i></button></div></div>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control">
+                                    <option value="">제작완료여부</option>
+                                </select>
+                            </div>                    
+                        </div>
+                        <!-- filter- footer -->
+                        <div class="filter-box-footer">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="material-icons">search</i>
+                                <span> 검색</span>
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button">초기화</button>
+                        </div>                
+                    </div>
+                </form>              
+            </pre>
+
+        </div>
+        <!-- //container -->            
+    </body>
+</html>
