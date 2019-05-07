@@ -257,8 +257,8 @@ fieldset:disabled a.btn {
   }
 }
 
-.btn-xsm {
-  @include button-size($btn-padding-y-xsm, $btn-padding-x-xsm, $btn-font-size-xsm, $btn-line-height-xsm, $enable-rounded="true", $btn-border-radius-xsm, $btn-border-color-xsm);
+.btn-md {
+  @include button-size($btn-padding-y-md, $btn-padding-x-md, $btn-font-size-md, $btn-line-height-md, /* $enable-rounded="true", */ /* $btn-border-radius-md, */ $btn-border-color-md);
 
   &.btn-icon {
     width: 18px; /* 임시 */
@@ -268,11 +268,11 @@ fieldset:disabled a.btn {
     font-size: 14px; /* 임시 */
   }
 
-  border-radius: $btn-border-radius-xsm;
+  // border-radius: $btn-border-radius-md;
 
-  border-color: $btn-border-color-xsm;
+  border-color: $btn-border-color-md;
 
-  color: #666;
+  color: #222;
 }
 
 .btn-block {
